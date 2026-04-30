@@ -3,154 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OTPGET Store | Buy Virtual Numbers</title>
+    <title>OTPGET PK | Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { background-color: #f4f7fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        .btn-blue { background-color: #007bff; transition: 0.3s; }
-        .btn-blue:hover { background-color: #0056b3; }
-        .dashboard-card { border-radius: 8px; border: 1px solid #e3e6f0; background: #fff; box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1); }
-        .shimmer { background: linear-gradient(90deg, #eff1f3 25%, #e2e7ed 50%, #eff1f3 75%); background-size: 200% 100%; animation: loading 1.5s infinite; }
-        @keyframes loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+        body { background-color: #f0f2f5; font-family: 'Inter', sans-serif; }
+        .bg-otp-blue { background-color: #0052ff; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .loading-shimmer { background: #e2e8f0; position: relative; overflow: hidden; border-radius: 8px; }
+        .loading-shimmer::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent); animation: wave 1.5s infinite; }
+        @keyframes wave { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
     </style>
 </head>
 <body>
 
-    <!-- Top Blue Header (Exactly like your SS) -->
-    <div class="w-full bg-[#0052ff] p-4 shadow-md">
+    <!-- Header (SS Jaisa) -->
+    <header class="bg-otp-blue p-4 shadow-md sticky top-0 z-50">
         <div class="max-w-4xl mx-auto flex justify-between items-center text-white">
-            <div class="flex items-center gap-2">
-                <i class="fa fa-bars text-xl opacity-70"></i>
-                <h1 class="text-xl font-bold tracking-tight uppercase">OTPGET</h1>
-            </div>
             <div class="flex items-center gap-3">
-                <span class="bg-[#6f42c1] text-[10px] px-2 py-1 rounded font-bold uppercase">PKR</span>
-                <span class="text-sm font-semibold">Rs. Store Live</span>
-                <img src="https://ui-avatars.com/api/?name=Admin&background=fff&color=0052ff" class="w-8 h-8 rounded-full border-2 border-white">
+                <i class="fa fa-bars text-xl opacity-80 cursor-pointer"></i>
+                <h1 class="text-xl font-bold tracking-tighter uppercase">OTPGET</h1>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="bg-purple-600 text-[10px] px-2 py-1 rounded font-bold">PKR</span>
+                <span class="text-xs font-bold">Rs. 573.00</span>
+                <div class="w-8 h-8 rounded-full bg-white text-otp-blue flex items-center justify-center font-bold text-xs">AD</div>
             </div>
         </div>
-    </div>
+    </header>
 
-    <!-- Main Content -->
-    <div class="max-w-4xl mx-auto p-4 lg:p-8">
+    <main class="max-w-4xl mx-auto p-4">
         
         <!-- Welcome Banner -->
-        <div class="bg-gradient-to-r from-[#0052ff] to-[#00a2ff] rounded-xl p-6 mb-8 text-white shadow-lg relative overflow-hidden">
+        <div class="bg-otp-blue rounded-2xl p-6 mb-6 text-white relative overflow-hidden shadow-lg">
             <div class="relative z-10">
-                <p class="opacity-80 text-sm">Welcome:</p>
-                <h2 class="text-2xl font-bold mb-4">OTPGET Store Front</h2>
-                <div class="inline-block bg-white/20 px-4 py-2 rounded-lg border border-white/30 backdrop-blur-md">
-                    <p class="text-[10px] uppercase font-bold opacity-80">Profit Margin</p>
-                    <p class="text-lg font-bold">Automatic +30% Added</p>
+                <p class="text-xs opacity-80 mb-1">Welcome Back!</p>
+                <h2 class="text-2xl font-bold">OTPGET Official Store</h2>
+                <div class="mt-4 flex gap-3">
+                    <div class="bg-white/10 p-2 px-4 rounded-lg backdrop-blur-sm border border-white/20">
+                        <p class="text-[9px] uppercase font-bold opacity-70">Price Status</p>
+                        <p class="text-sm font-bold tracking-wide">Updated (Live)</p>
+                    </div>
                 </div>
             </div>
-            <i class="fa fa-circle-nodes absolute -right-10 -bottom-10 text-white/10 text-[200px]"></i>
+            <i class="fa fa-bolt absolute -right-4 -bottom-4 text-white/10 text-9xl"></i>
         </div>
 
-        <!-- Action Buttons (Quick Actions) -->
+        <!-- Dashboard Buttons -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-            <button class="btn-blue text-white text-[11px] py-3 rounded-lg font-bold shadow-sm uppercase">Recieve SMS</button>
-            <button class="btn-blue text-white text-[11px] py-3 rounded-lg font-bold shadow-sm uppercase opacity-80">Numbers Prices</button>
-            <button class="btn-blue text-white text-[11px] py-3 rounded-lg font-bold shadow-sm uppercase opacity-80">Rent Numbers</button>
-            <a href="https://wa.me/923486175620" class="btn-blue text-white text-[11px] py-3 rounded-lg font-bold shadow-sm uppercase text-center">Add Balance</a>
+            <div class="bg-otp-blue text-white p-3 rounded-lg text-center text-[10px] font-bold uppercase shadow-sm">Receive SMS</div>
+            <div class="bg-otp-blue text-white p-3 rounded-lg text-center text-[10px] font-bold uppercase shadow-sm opacity-90">Numbers Prices</div>
+            <div class="bg-otp-blue text-white p-3 rounded-lg text-center text-[10px] font-bold uppercase shadow-sm opacity-90">Rent Numbers</div>
+            <a href="https://wa.me/923486175620" class="bg-otp-blue text-white p-3 rounded-lg text-center text-[10px] font-bold uppercase shadow-sm">Add Balance</a>
         </div>
 
-        <!-- Search Section -->
-        <div class="dashboard-card p-4 mb-6">
-            <div class="flex items-center gap-3 border rounded-lg px-3 py-2 focus-within:ring-2 focus-within:ring-blue-500 transition-all">
-                <i class="fa fa-search text-gray-400"></i>
-                <input type="text" id="searchBox" placeholder="Search service (e.g WhatsApp, Google, Telegram)..." class="w-full outline-none text-sm bg-transparent">
-            </div>
+        <!-- Search -->
+        <div class="card p-3 mb-6 flex items-center gap-3">
+            <i class="fa fa-search text-gray-400 pl-2"></i>
+            <input type="text" id="serviceSearch" placeholder="Search service (WhatsApp, Telegram...)" 
+            class="w-full outline-none text-sm font-medium">
         </div>
 
-        <!-- Numbers List -->
-        <div id="servicesContainer" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Loading Skeletons -->
-            <div class="shimmer h-24 rounded-lg"></div>
-            <div class="shimmer h-24 rounded-lg"></div>
-            <div class="shimmer h-24 rounded-lg"></div>
-            <div class="shimmer h-24 rounded-lg"></div>
+        <!-- Services Section -->
+        <h3 class="text-gray-500 font-bold text-[11px] uppercase tracking-wider mb-4 px-1">Available Services</h3>
+        <div id="servicesList" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Shimmer Loading -->
+            <div class="loading-shimmer h-20"></div>
+            <div class="loading-shimmer h-20"></div>
+            <div class="loading-shimmer h-20"></div>
+            <div class="loading-shimmer h-20"></div>
         </div>
-    </div>
+    </main>
 
     <script>
+        // Data configurations
         const API_KEY = '5e1dpaoypy3krh2apmws4qmfaeczbe5b';
-        const WHATSAPP_NUMBER = '923486175620';
-        const PROFIT_PERCENT = 30;
+        const WA_LINK = '923486175620';
+        const PROFIT = 1.30; // 30% added profit
 
-        async function loadStore() {
-            const container = document.getElementById('servicesContainer');
+        async function startApp() {
+            const listArea = document.getElementById('servicesList');
             
             try {
-                // Using a more reliable CORS Proxy
-                const targetUrl = `https://otpget.com/stubs/handler_api.php?api_key=${API_KEY}&action=getPrices&country=0`;
-                const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`;
+                // New high-speed proxy
+                const target = `https://otpget.com/stubs/handler_api.php?api_key=${API_KEY}&action=getPrices&country=0`;
+                const proxy = `https://api.allorigins.win/get?url=${encodeURIComponent(target)}`;
 
-                const response = await fetch(proxyUrl);
-                const json = await response.json();
+                const response = await fetch(proxy);
+                const result = await response.json();
                 
-                // If AllOrigins failed or returned null
-                if (!json.contents) throw new Error("CORS Proxy Failed");
-                
-                const allData = JSON.parse(json.contents);
-                const services = allData["0"] || allData;
+                // Parse the data correctly
+                const parsedData = JSON.parse(result.contents);
+                const services = parsedData["0"] || parsedData;
 
-                container.innerHTML = '';
+                listArea.innerHTML = '';
                 
-                // Show first 150 services
-                Object.keys(services).slice(0, 150).forEach(key => {
-                    const priceData = services[key];
-                    const basePrice = Object.values(priceData)[0];
-                    const salePrice = Math.ceil(basePrice * (1 + PROFIT_PERCENT/100));
+                // Loop through top services
+                Object.keys(services).slice(0, 150).forEach(name => {
+                    const price = Object.values(services[name])[0];
+                    const salePrice = Math.ceil(price * PROFIT);
 
-                    const card = document.createElement('div');
-                    card.className = "dashboard-card p-4 flex justify-between items-center hover:scale-[1.02] transition-transform cursor-default";
-                    card.innerHTML = `
+                    const div = document.createElement('div');
+                    div.className = "card p-4 flex justify-between items-center hover:border-blue-500 border border-transparent transition-all";
+                    div.innerHTML = `
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-gray-100 rounded flex items-center justify-center text-blue-600 font-bold border">
-                                <i class="fa fa-sms opacity-50"></i>
+                            <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center text-otp-blue font-bold text-xs uppercase border border-blue-100">
+                                ${name.substring(0, 2)}
                             </div>
                             <div>
-                                <h4 class="text-xs font-bold text-gray-700 uppercase tracking-tighter">${key}</h4>
-                                <span class="text-[9px] text-green-600 font-bold bg-green-50 px-2 py-0.5 rounded">ONLINE</span>
+                                <h4 class="text-xs font-black text-gray-800 uppercase tracking-tight">${name}</h4>
+                                <div class="flex items-center gap-1 mt-1">
+                                    <div class="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                                    <span class="text-[9px] font-bold text-green-600 uppercase">Available</span>
+                                </div>
                             </div>
                         </div>
                         <div class="text-right">
-                            <p class="text-lg font-bold text-gray-800 leading-none">Rs. ${salePrice}</p>
-                            <a href="https://wa.me/${WHATSAPP_NUMBER}?text=I want to buy ${key.toUpperCase()} for Rs.${salePrice}" 
-                               class="inline-block mt-2 bg-[#0052ff] text-white text-[9px] font-bold px-4 py-1.5 rounded uppercase shadow-sm active:opacity-80">
+                            <p class="text-lg font-black text-slate-900 leading-none">Rs. ${salePrice}</p>
+                            <a href="https://wa.me/${WA_LINK}?text=I want to buy ${name.toUpperCase()} for Rs.${salePrice}" 
+                               class="inline-block mt-2 bg-otp-blue text-white text-[9px] font-extrabold px-5 py-2 rounded-md shadow-md active:scale-95 transition-all">
                                BUY NOW
                             </a>
                         </div>
                     `;
-                    container.appendChild(card);
+                    listArea.appendChild(div);
                 });
 
             } catch (err) {
-                console.error(err);
-                container.innerHTML = `
-                    <div class="col-span-full text-center py-10">
-                        <i class="fa fa-exclamation-triangle text-orange-400 text-3xl mb-3"></i>
-                        <p class="text-gray-600 text-sm font-semibold">Connection Timeout. OTPGET server is busy.</p>
-                        <button onclick="window.location.reload()" class="mt-4 bg-[#0052ff] text-white px-6 py-2 rounded-lg text-xs font-bold uppercase shadow-md">Try Again</button>
+                listArea.innerHTML = `
+                    <div class="col-span-full text-center py-10 bg-white rounded-xl shadow-sm">
+                        <i class="fa fa-wifi text-gray-300 text-4xl mb-3"></i>
+                        <p class="text-gray-500 text-xs font-bold">API CONNECTION SLOW</p>
+                        <button onclick="location.reload()" class="mt-4 bg-otp-blue text-white px-8 py-2 rounded-lg text-xs font-bold">RELOAD NOW</button>
                     </div>
                 `;
             }
         }
 
-        // Fast Search logic
-        document.getElementById('searchBox').addEventListener('input', function(e) {
-            const val = e.target.value.toLowerCase();
-            const cards = document.querySelectorAll('#servicesContainer > div');
+        // Search Script
+        document.getElementById('serviceSearch').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('#servicesList > div');
             cards.forEach(card => {
                 const title = card.querySelector('h4').innerText.toLowerCase();
-                card.style.display = title.includes(val) ? 'flex' : 'none';
+                card.style.display = title.includes(query) ? 'flex' : 'none';
             });
         });
 
-        // Initialize Store
-        document.addEventListener('DOMContentLoaded', loadStore);
+        // Initialize on load
+        window.addEventListener('DOMContentLoaded', startApp);
     </script>
 </body>
 </html>
